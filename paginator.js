@@ -20,7 +20,14 @@ var paginator = function() { return {
 	sql_limit: function() {
 		return ' LIMIT '+this.limit*(this.page-1)+', '+this.limit+' ';
 	},
-	html_links: function (href) {
+	html_links: function (href, length, sph) {
+
+		if (typeof length != 'undefined')
+			this.set_length(length);
+
+		if (typeof sph != 'undefined')
+			this.selected_page_href = parseInt(sph);
+		
 		chain = Array();
 		this.pages = Math.ceil(this.count/this.limit);
 		for(i=1; i<=this.pages; i++) {
