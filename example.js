@@ -14,4 +14,6 @@ connection.query('SELECT count(id) as cnt FROM pages; select * from pages '+pgnt
   console.log(pgntr.html_links('/page/:page', 5, 0));
   // arguments: link template (string), paginations central pages length (int), clickable of selected page (bool)
   
+  console.log(pgntr.index()) // autoicrement of element index, start from the index of the first element of the page
+  
 })
