@@ -1,7 +1,8 @@
 # node-paginator
-node.js pagination manager with native input
+Node.js pagination manager with native input.
 
-it is manage of sql query limits and pages links
+It is manage of sql query limits and pages links
 
 
-for more info see example.js
+
+For more info see example.js
