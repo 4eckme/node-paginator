@@ -5,11 +5,17 @@ var paginator = function() { return {
 	pages: 0,
 	length: 0,
 	selected_page_href: 1,
+	i: 0,
 	set_limit: function (l) {
 		this.count = parseInt(l);
 	},
 	set_page: function (p) {
 		this.page = parseInt(p) ? parseInt(p) : 1
+	},
+	index: function() {
+		if(!this.i) this.i = this.limit*(this.page-1)+1;
+		else this.i++;
+		return this.i;
 	},
 	set_count: function (c) {
 		this.count = parseInt(c);
